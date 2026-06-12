@@ -37,7 +37,7 @@ Se você preferir rodar o projeto na sua máquina usando o VS Code, siga estes p
      * Crie uma pasta e abra ela no VScode
      * Abra o terminal e clone o repositório:
      ```bash
-     git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+     git clone [https://github.com/glhrmlud/AirSense.git]
      ```
    * **Se você NÃO tem o Git instalado:**
      * Clique no botão verde **"Code"** (no topo desta página) e selecione **"Download ZIP"**. Depois, extraia os arquivos na sua máquina.
