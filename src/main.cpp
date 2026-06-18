@@ -151,9 +151,9 @@ unsigned long tempoAnteriorRel = 0;
 unsigned long tempoAnteriorAr = 0;
 unsigned long tempoAnteriorDisplay = 0;
 int telaAtual = 0;
-const long intervaloTemp = 1500000;
+const long intervaloTemp = 600000;
 const long intervaloRel = 60000;
-const long intervaloAr = 100000;
+const long intervaloAr = 300000;
 const long intervaloDisplay = 4000;
 float tempDHT;
 float umidDHT;
@@ -225,7 +225,7 @@ void loop() // PROCESSAMENTO (INPUTs E OUTPUTs)
     {
       int qualidadeArLeitura = analogRead(PIN_GAS_SENSOR); // Lê o valor analógico (0-4090) do sensor de gás
 
-      if (verificarErro(qualidadeArLeitura))
+      if (!verificarErro(qualidadeArLeitura))
       {
         qualidadeAr = processarQualidadeAr(qualidadeArLeitura);
         mudarCorMatriz(qualidadeAr);
