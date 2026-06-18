@@ -24,6 +24,12 @@ Se você preferir rodar o projeto na sua máquina usando o VS Code, siga estes p
 1. **Pré-requisitos:**
    * Ter o [VS Code](https://code.visualstudio.com/) instalado.
    * Instalar a extensão **Wokwi Simulator** no VS Code.
+   * **Ative a licença do Wokwi (Gratuita):**
+     * A extensão do Wokwi no VS Code precisa de uma licença ativa para funcionar.
+     * Pressione `F1` (ou `Ctrl+Shift+P`), digite `Wokwi: Request a New License` e pressione Enter.
+     * O VS Code vai abrir o seu navegador. Clique no botão **"GET YOUR LICENSE"** (você pode logar com sua conta do GitHub).
+     * O navegador pedirá permissão para voltar ao VS Code. Aceite, e você verá uma mensagem confirmando que a licença foi ativada!
+     *(Nota: Para projetos open-source a licença é grátis e dura 30 dias, podendo ser renovada pelo mesmo processo sempre que expirar).*
    * Instalar a extensão **PlatformIO** no VS code.
 
 2. **Passo a Passo:**
@@ -31,7 +37,7 @@ Se você preferir rodar o projeto na sua máquina usando o VS Code, siga estes p
      * Crie uma pasta e abra ela no VScode
      * Abra o terminal e clone o repositório:
      ```bash
-     git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+     git clone [https://github.com/glhrmlud/AirSense.git]
      ```
    * **Se você NÃO tem o Git instalado:**
      * Clique no botão verde **"Code"** (no topo desta página) e selecione **"Download ZIP"**. Depois, extraia os arquivos na sua máquina.
