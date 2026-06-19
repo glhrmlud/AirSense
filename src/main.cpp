@@ -152,7 +152,6 @@ unsigned long tempoAnteriorAr = 0;
 unsigned long tempoAnteriorDisplay = 0;
 int telaAtual = 0;
 const long intervaloTemp = 600000;
-const long intervaloRel = 60000;
 const long intervaloAr = 300000;
 const long intervaloDisplay = 4000;
 float tempDHT;
@@ -211,13 +210,6 @@ void loop() // PROCESSAMENTO (INPUTs E OUTPUTs)
       tempoAnteriorTemp = tempoAtual; // Reseta o Timer
     }
 
-    // PROCESSAMENTO RELÓGIO
-    if (verificarTempo(tempoAtual, tempoAnteriorRel, intervaloRel))
-    {
-      agora = rtc.now(); // Variavel do tipo DateTime recebe o horario de agora
-      tempoAnteriorRel = tempoAtual;
-    }
-
     int intervaloAjustadoAr = (tentativasAr > 0) ? 2000 : intervaloAr; // Ajusta o intervalo pra caso haja erro na leitura
 
     // PROCESSAMENTO SENSOR DE GAS
@@ -271,6 +263,7 @@ void loop() // PROCESSAMENTO (INPUTs E OUTPUTs)
     }
 
     // OBRIGATÓRIO EM QUALQUER INFORMAÇÃO QUE FOR EXIBIDA NO DISPLAY DE OLED
+    agora = rtc.now(); // Variavel do tipo DateTime recebe o horario de agora
     char msg[9];
     snprintf(msg, sizeof(msg), "%02d:%02d", agora.hour(), agora.minute()); // FORMATA A DATA
     setDisplay(90, 55, msg, -1.0);                                         // Exibe data na tela
